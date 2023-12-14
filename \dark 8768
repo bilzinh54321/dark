@@ -1,0 +1,38 @@
+import turtle
+
+# Configuração inicial
+turtle.speed(2)
+turtle.bgcolor("black")
+
+# Função para desenhar um coração
+def draw_heart(color1, color2):
+    turtle.fillcolor(color1)
+    turtle.begin_fill()
+    turtle.left(50)
+    turtle.forward(133)
+    turtle.circle(50, 200)
+    turtle.right(140)
+    turtle.circle(50, 200)
+    turtle.forward(133)
+    turtle.end_fill()
+    turtle.color(color2)
+    turtle.up()
+    turtle.goto(0, 0)
+    turtle.down()
+
+# Desenha o coração vermelho
+draw_heart("red", "red")
+
+# Muda a posição para o segundo coração
+turtle.up()
+turtle.goto(-150, 0)
+turtle.down()
+
+# Desenha o coração rosa
+draw_heart("pink", "pink")
+
+# Esconde a tartaruga
+turtle.hideturtle()
+
+# Mantém a janela aberta
+turtle.done()
